@@ -5,30 +5,30 @@
         <link href="stilo.css" rel="stylesheet" type="text/css"/> 
     </head>
     <body>
-        <h1>Veterinaria</h1>
-        
+        <header>
+        <h1 class="titulo">Veterinaria</h1>
+        </header>
+
+        <article>
+            <div> 
         <h2>Agregar mascota:</h2>
         <form action="srvControlador" method="get">
-            <h3>Caninos:</h3>
-            <div>
-            Nombre: <input type="text" name="txtCaninoNombre">
-            Raza: <input type="text" name="txtCaninoRaza">
-            Color: <input type="text" name="txtCaninoColor">
-            Edad: <input type="text" name="txtCaninoEdad">
-            Nivel entrenamiento: <input type="text" name="txtCaninoNvEntrenamiento">
-            </div>
-            <input type="submit">
-        </form>
-        <form action="srvControlador" method="get">
-            <h3>Felinos:</h3>
-            <div>
-            Nombre: <input type="text" name="txtFelinoNombre">
-            Raza: <input type="text" name="txtFelinoRaza">
-            Color: <input type="text" name="txtFelinoColor">
-            Edad: <input type="text" name="txtFelinoEdad">
-            Toxoplasmosis: <input type="text" name="txtFelinoToxoplasmosis">
-            </div>
-            <input type="submit">
-        </form>
+            
+                Nombre: <input type="text" name="txtCaninoNombre">
+                Raza: <input type="text" name="txtCaninoRaza">
+                Color: <input type="text" name="txtCaninoColor">
+                Edad: <input type="text" name="txtCaninoEdad"><br>
+
+                <p>¿Tiene Toxoplasmosis? <br>
+                    si <input type="radio" name="txtFelinoToxoplasmosis" value="true">
+                    no <input type="radio" name="txtFelinoToxoplasmosis" value="true">
+                </p> 
+                Nivel entrenamiento: <input type="text" name="txtCaninoNvEntrenamiento">
+                
+                <input type="submit">
+            </form>
+        </div>
+        </article>
+
     </body>
 </html>
