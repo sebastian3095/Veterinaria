@@ -21,5 +21,12 @@ public class Caninos extends Mascotas {
     public void setNivelEntrenamiento(int nivelEntrenamiento) {
         this.nivelEntrenamiento = nivelEntrenamiento;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "<br>Nivel de entrenamiento: "+ nivelEntrenamiento;
+    }
+    
+    
     
 }
