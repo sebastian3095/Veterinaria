@@ -1,9 +1,25 @@
 package modelo;
 
+public class Caninos extends Mascotas {
 
-public class Caninos extends Mascotas{
+    private int nivelEntrenamiento;
 
+    public Caninos() {
+    }
+    
+    public Caninos(String nombre, String raza, String color, int edad, int nivelEntrenamiento) {
+        
+        super(nombre, raza, color, edad);
+        this.nivelEntrenamiento = nivelEntrenamiento;
 
-    int nivelEntrenamiento;
+    }
+
+    public int getNivelEntrenamiento() {
+        return nivelEntrenamiento;
+    }
+
+    public void setNivelEntrenamiento(int nivelEntrenamiento) {
+        this.nivelEntrenamiento = nivelEntrenamiento;
+    }
     
 }

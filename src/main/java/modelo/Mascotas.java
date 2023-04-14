@@ -1,12 +1,12 @@
 package modelo;
 
 
-public abstract class Mascotas {
+public class Mascotas {
     
-    protected String nombre;
-    protected String raza;
-    protected String color;
-    protected int edad;
+    private String nombre;
+    private String raza;
+    private String color;
+    private int edad;
 
     public Mascotas() {
     }
@@ -49,7 +49,10 @@ public abstract class Mascotas {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
+    
+    public String datos(){
+        return nombre+raza+color+edad;
+    }
     
     
     

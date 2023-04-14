@@ -3,6 +3,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Veterinaria</title>
         <link href="stilo.css" rel="stylesheet" type="text/css"/> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -12,20 +15,26 @@
         <article>
             <div> 
         <h2>Agregar mascota:</h2>
-        <form action="srvControlador" method="get">
+        <form action="ControladorSrv" method="get">
+                <p>
+                    Gato <input type="radio" name="txtTipoMascota" value="gato">
+                    Perro <input type="radio" name="txtTipoMascota" value="perro"> 
+                </p>
             
-                Nombre: <input type="text" name="txtCaninoNombre">
-                Raza: <input type="text" name="txtCaninoRaza">
-                Color: <input type="text" name="txtCaninoColor">
-                Edad: <input type="text" name="txtCaninoEdad"><br>
+                <p>Nombre: <input type="text" name="txtNombre"></p> 
+                <p>Raza: <input type="text" name="txRaza"></p> 
+                <p>Color: <input type="text" name="txtColor"></p> 
+                <p>Edad: <input type="text" name="txtEdad"></p> 
 
-                <p>¿Tiene Toxoplasmosis? <br>
+                <p>
+                    ¿Tiene Toxoplasmosis? <br>
                     si <input type="radio" name="txtFelinoToxoplasmosis" value="true">
-                    no <input type="radio" name="txtFelinoToxoplasmosis" value="true">
+                    no <input type="radio" name="txtFelinoToxoplasmosis" value="false">
                 </p> 
-                Nivel entrenamiento: <input type="text" name="txtCaninoNvEntrenamiento">
-                
-                <input type="submit">
+
+                <p>Nivel entrenamiento: <input type="text" name="txtCaninoNvEntrenamiento"></p> 
+
+                <input type="submit" value="Agregar">
             </form>
         </div>
         </article>

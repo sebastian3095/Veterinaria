@@ -1,3 +1,7 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
 body{
     margin: 0;
     background-image: url('https://img.freepik.com/vector-premium/patron-costuras-veterinaria-mascotas-medicamentos-alimentos_192280-278.jpg?w=2000');
@@ -29,5 +33,10 @@ article{
 }
 
 article h2,form{
-    padding: 1rem ;
+    padding: 1rem 1rem ;
+}
+
+article h2{
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
