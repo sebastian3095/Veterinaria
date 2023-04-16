@@ -21,10 +21,18 @@ public class Felinos extends Mascotas{
     public void setToxoplasmosis(boolean toxoplasmosis) {
         this.toxoplasmosis = toxoplasmosis;
     }
+    
+    public String tieneT(){
+        if(toxoplasmosis){
+            return "si";
+        }else{
+            return "no";
+        }
+    }
 
     @Override
     public String toString() {
-        return "Felinos{" + "toxoplasmosis=" + toxoplasmosis + '}';
+        return super.toString()+ "<br>Tiene Toxoplasmosis: "+ tieneT();
     }
 
     
