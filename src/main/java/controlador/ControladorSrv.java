@@ -19,7 +19,7 @@ import modelo.*;
  */
 @WebServlet(name = "ControladorSrv", urlPatterns = {"/ControladorSrv"})
 public class ControladorSrv extends HttpServlet {
-
+    ListMascotas p=new ListMascotas();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -44,28 +44,14 @@ public class ControladorSrv extends HttpServlet {
             String color = request.getParameter("txtColor");
             int edad = Integer.parseInt(request.getParameter("txtEdad"));
             
-            ListMascotas cM = new ListMascotas();
+            CrearObjeto mascota= new CrearObjeto(nombre, raza, color, edad, tipoMascota, toxoplasmosis, nivelEntranamiento);
+            mascota.definirMascota();
             
-            if(tipoMascota.equals("gato")){
-                Felinos gato = new Felinos();
-                gato.setNombre(nombre);
-                gato.setRaza(raza);
-                gato.setColor(color);
-                gato.setEdad(edad);
-                gato.setToxoplasmosis(toxoplasmosis);
-                
-                cM.agregarMascota(gato);
-                
-            }else{
-                Caninos canino = new Caninos();
-                canino.setNombre(nombre);
-                canino.setRaza(raza);
-                canino.setColor(color);
-                canino.setEdad(edad);
-                canino.setNivelEntrenamiento(nivelEntranamiento);
-                
-                cM.agregarMascota(canino);
-            }
+            HashMascotas lista=new HashMascotas();
+            
+            lista.agregarMascota(nombre, mascota.getMascota());
+            
+            
             
             
             
@@ -75,7 +61,8 @@ public class ControladorSrv extends HttpServlet {
             out.println("<title>Servlet ControladorSrv</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ControladorSrv at " + cM.consultarMascotas()+ "</h1>");
+            out.println("<h1>Servlet ControladorSrv at " + p.prueba() + "</h1>");
+            out.println("<a href=\"index.html\">home</a>");
             out.println("</body>");
             out.println("</html>");
         }
