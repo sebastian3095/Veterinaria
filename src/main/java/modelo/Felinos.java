@@ -32,7 +32,7 @@ public class Felinos extends Mascotas{
 
     @Override
     public String toString() {
-        return super.toString()+ "<br>Tiene Toxoplasmosis: "+ tieneT();
+        return super.toString()+ "<td>Tiene Toxoplasmosis: "+ tieneT()+"</td>";
     }
 
     

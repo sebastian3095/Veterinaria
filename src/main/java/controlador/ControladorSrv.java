@@ -19,7 +19,7 @@ import modelo.*;
  */
 @WebServlet(name = "ControladorSrv", urlPatterns = {"/ControladorSrv"})
 public class ControladorSrv extends HttpServlet {
-    ListMascotas p=new ListMascotas();
+    ListMascotas lista=new ListMascotas();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -44,13 +44,13 @@ public class ControladorSrv extends HttpServlet {
             String color = request.getParameter("txtColor");
             int edad = Integer.parseInt(request.getParameter("txtEdad"));
             
-            CrearObjeto mascota= new CrearObjeto(nombre, raza, color, edad, tipoMascota, toxoplasmosis, nivelEntranamiento);
-            mascota.definirMascota();
+            //mascota.Imascota(nombre, raza, color, edad, tipoMascota, toxoplasmosis, nivelEntranamiento);
+            CrearObjeto.pp(nombre, raza, color, edad, tipoMascota, toxoplasmosis, nivelEntranamiento);
+            CrearObjeto.definirMascota();
+            //mascota.definirMascota();
             
-            HashMascotas lista=new HashMascotas();
-            
-            lista.agregarMascota(nombre, mascota.getMascota());
-            
+            //lista.agregarMascota(mascota.getMascota());
+            lista.agregarMascota(CrearObjeto.getMascota());
             
             
             
@@ -61,8 +61,22 @@ public class ControladorSrv extends HttpServlet {
             out.println("<title>Servlet ControladorSrv</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ControladorSrv at " + p.prueba() + "</h1>");
-            out.println("<a href=\"index.html\">home</a>");
+            out.println("<table>");
+            out.println("<tr>");
+            out.println("<th>Nombre</th>");
+            out.println("<th>Raza</th>");
+            out.println("<th>Color</th>");
+            out.println("<th>Edad</th>");
+            out.println("<th>Otros</th>");
+            out.println("</tr>");
+            
+            //out.println("<h1>tablas"+lista.consultarMascotas()+"</h1>");
+            for(int i=0;i<lista.listaMascotas.size();i++){
+                out.println("<tr>"+lista.consultarMascotas(i)+"</tr>");
+            }
+            
+            out.println("</table>");
+            out.println("<a href=\"index.html\">Agregar otra mascota</a>");
             out.println("</body>");
             out.println("</html>");
         }

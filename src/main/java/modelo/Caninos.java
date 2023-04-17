@@ -24,7 +24,7 @@ public class Caninos extends Mascotas {
 
     @Override
     public String toString() {
-        return super.toString()+ "<br>Nivel de entrenamiento: "+ nivelEntrenamiento;
+        return super.toString()+ "<td>Nivel de entrenamiento: "+ nivelEntrenamiento+"</td>";
     }
     
     

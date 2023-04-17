@@ -50,15 +50,13 @@ public class Mascotas {
         this.edad = edad;
     }
     
-    public String datos(){
-        return nombre+raza+color+edad;
-    }
+   
     
     
     
     @Override
     public String toString() {
-        return "Mascotas{" + "nombre=" + nombre + ", raza=" + raza + ", color=" + color + ", edad=" + edad + '}';
+        return "<td>"+nombre+"</td><td>"+raza+"</td><td>"+color+"</td><td>"+edad+"</td>";
     }
     
     
