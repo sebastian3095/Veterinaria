@@ -3,6 +3,7 @@ package modelo;
 public class Caninos extends Mascotas {
 
     private int nivelEntrenamiento;
+    
 
     public Caninos() {
     }
@@ -24,7 +25,7 @@ public class Caninos extends Mascotas {
 
     @Override
     public String toString() {
-        return super.toString()+ "<td>Nivel de entrenamiento: "+ nivelEntrenamiento+"</td>";
+        return super.toString()+ "<td>Nivel de entrenamiento: "+ nivelEntrenamiento+"</td><td>"+super.botonE()+"</td>";
     }
     
     

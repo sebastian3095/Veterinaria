@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class ListMascotas implements Ipromedio {
     
-    int i=0;
-    public ArrayList<Mascotas> listaMascotas = new ArrayList<>();                  
+    
+    private ArrayList<Mascotas> listaMascotas = new ArrayList<>();                  
     
     public void agregarMascota(Mascotas mascota) {
         listaMascotas.add(mascota);
@@ -27,9 +27,15 @@ public class ListMascotas implements Ipromedio {
         
     }
     
+    public int listaSize(){
+       
+        return listaMascotas.size();
+    }
 
-    public void eliminarMascota(Mascotas mascota) {
-        listaMascotas.remove(mascota);
+    public void eliminarMascota(int i) {
+        
+        listaMascotas.remove(i);
+        
     }
 
     public double promedio() {

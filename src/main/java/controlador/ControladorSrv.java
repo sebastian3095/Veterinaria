@@ -44,13 +44,12 @@ public class ControladorSrv extends HttpServlet {
             String color = request.getParameter("txtColor");
             int edad = Integer.parseInt(request.getParameter("txtEdad"));
             
-            //mascota.Imascota(nombre, raza, color, edad, tipoMascota, toxoplasmosis, nivelEntranamiento);
             CrearObjeto.pp(nombre, raza, color, edad, tipoMascota, toxoplasmosis, nivelEntranamiento);
             CrearObjeto.definirMascota();
-            //mascota.definirMascota();
-            
-            //lista.agregarMascota(mascota.getMascota());
+
             lista.agregarMascota(CrearObjeto.getMascota());
+            
+            CrearObjeto.definirNumeroM(lista.listaSize());
             
             
             
@@ -68,11 +67,15 @@ public class ControladorSrv extends HttpServlet {
             out.println("<th>Color</th>");
             out.println("<th>Edad</th>");
             out.println("<th>Otros</th>");
+            out.println("<th>Accion</th>");
             out.println("</tr>");
             
-            //out.println("<h1>tablas"+lista.consultarMascotas()+"</h1>");
-            for(int i=0;i<lista.listaMascotas.size();i++){
+            for(int i=0;i<lista.listaSize();i++){
                 out.println("<tr>"+lista.consultarMascotas(i)+"</tr>");
+            }
+            
+            if(request.getParameter("txteliminar") != null){
+                lista.eliminarMascota(Integer.parseInt("txteliminar"));
             }
             
             out.println("</table>");

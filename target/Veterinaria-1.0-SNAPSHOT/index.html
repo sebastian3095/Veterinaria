@@ -15,24 +15,24 @@
         <article>
             <div> 
         <h2>Agregar mascota:</h2>
-        <form action="ControladorSrv" method="get">
+        <form action="ControladorSrv" method="post">
                 <p>
                     Gato <input type="radio" name="txtTipoMascota" value="gato">
                     Perro <input type="radio" name="txtTipoMascota" value="perro"> 
                 </p>
             
-                <p>Nombre: <input type="text" name="txtNombre"></p> 
-                <p>Raza: <input type="text" name="txtRaza"></p> 
-                <p>Color: <input type="text" name="txtColor"></p> 
-                <p>Edad: <input type="text" name="txtEdad"></p> 
+                <p>Nombre: <input type="text" name="txtNombre" value="firulais"></p> 
+                <p>Raza: <input type="text" name="txtRaza" value="golden"></p> 
+                <p>Color: <input type="text" name="txtColor" value="cafe"></p> 
+                <p>Edad: <input type="text" name="txtEdad" value="3"></p> 
 
                 <p>
                     ¿Tiene Toxoplasmosis? <br>
-                    si <input type="radio" name="txtFelinoToxoplasmosis" value="true">
-                    no <input type="radio" name="txtFelinoToxoplasmosis" value="false">
+                    si <input type="radio" name="txtFelinoToxoplasmosis" value="true" >
+                    no <input type="radio" name="txtFelinoToxoplasmosis" value="false" checked>
                 </p> 
 
-                <p>Nivel entrenamiento: <input type="text" name="txtCaninoNvEntrenamiento"></p> 
+                <p>Nivel entrenamiento: <input type="number" name="txtCaninoNvEntrenamiento" value="1" min="0" max="10"></p> 
 
                 <input type="submit" value="Agregar">
             </form>

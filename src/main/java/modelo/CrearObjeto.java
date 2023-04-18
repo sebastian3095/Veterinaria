@@ -15,12 +15,11 @@ public class CrearObjeto {
     private static String tipoMascota;
     private static boolean toxoplasmosis;
     private static int nivelEntrenamiento;
+    private static int contadorCaninos=0;
+    private static int contadorFelinos=0;
+    private static int numeroMascota;
 
     
-    
-    
-
-   
     
     public static void pp(String nombre, String raza, String color, int edad,String tipoMascota, boolean toxoplasmosis, int nivelEntrenamiento){
         CrearObjeto.nombre = nombre;
@@ -37,11 +36,29 @@ public class CrearObjeto {
         if(tipoMascota.equals("gato")){
             Felinos gato= new Felinos(nombre,raza,color,edad,toxoplasmosis);
             mascota=gato;
+            contadorFelinos++;
         }else{
             Caninos perro=new Caninos(nombre,raza,color,edad,nivelEntrenamiento);
             mascota=perro;
+            contadorCaninos++;
         }
         
+    }
+    
+    public static void definirNumeroM(int numero){
+        CrearObjeto.numeroMascota=numero;
+    }
+    
+    public static int darNumeroM(){
+        return CrearObjeto.numeroMascota;
+    }
+    
+    public static String botonE(){
+        return "<form>"
+                + "<input type=\"hidden\" name=\"txteliminar\" value=\""+edad+"\">"
+                + "<input type=\"submit\" value=\""+numeroMascota+"\">"
+                + "</form>";
+        //return "<button value=\""+edad+"\" name=\"bttnEliminar\">eliminar</button>";
     }
     
     public static Mascotas getMascota(){

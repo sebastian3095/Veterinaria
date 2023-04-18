@@ -7,6 +7,7 @@ public class Mascotas {
     private String raza;
     private String color;
     private int edad;
+    private int numeroMascota;
 
     public Mascotas() {
     }
@@ -16,6 +17,7 @@ public class Mascotas {
         this.raza = raza;
         this.color = color;
         this.edad = edad;
+        this.numeroMascota=CrearObjeto.darNumeroM();
     }
 
     public String getNombre() {
@@ -48,6 +50,16 @@ public class Mascotas {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+    
+    
+    
+    
+   public String botonE(){
+        return "<form action=\"index.html\">"
+                + "<input type=\"hidden\" name=\"txteliminar\" value=\""+numeroMascota+"\">"
+                + "<input type=\"submit\" value=\""+numeroMascota+"\">"
+                + "</form>";
     }
     
    
