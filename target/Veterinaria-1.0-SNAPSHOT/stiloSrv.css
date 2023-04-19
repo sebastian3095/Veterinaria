@@ -1,0 +1,71 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+    background-image: url('https://img.freepik.com/vector-premium/patron-costuras-veterinaria-mascotas-medicamentos-alimentos_192280-278.jpg?w=2000');
+
+}
+
+header {
+    background-color: #0678db;
+    padding: 3rem;
+    color: #e6fdf5;
+}
+
+header h1{
+    text-align: center;
+}
+
+input{
+    border-radius: 100px;
+    border-style: solid;
+    border-color: #0678db;
+}
+
+article{
+    background-color: #e6fdf5;
+    width: 500px;
+    height: auto;
+    margin: 4rem auto;
+    border-radius: 20px;
+}
+
+article h2,form{
+    padding: 1rem 1rem ;
+}
+
+article h2{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px #eee;
+    padding: 5px;
+}
+
+th {
+    background-color: orange;
+    color: white;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+}
+
+tr:hover {
+    background-color: #aaa;
+}

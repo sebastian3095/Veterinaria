@@ -57,9 +57,14 @@ public class ControladorSrv extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
+            out.println("<link href=\"stiloSrv.css\" rel=\"stylesheet\" type=\"text/css\"/> \n" +
+"        <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n" +
+"        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n" +
+"        <link href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap\" rel=\"stylesheet\"> ");
             out.println("<title>Servlet ControladorSrv</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println("<article>");           
             out.println("<table>");
             out.println("<tr>");
             out.println("<th>Nombre</th>");
@@ -80,6 +85,7 @@ public class ControladorSrv extends HttpServlet {
             
             out.println("</table>");
             out.println("<a href=\"index.html\">Agregar otra mascota</a>");
+            out.println("</article>");
             out.println("</body>");
             out.println("</html>");
         }

@@ -58,7 +58,7 @@ public class Mascotas {
    public String botonE(){
         return "<form action=\"index.html\">"
                 + "<input type=\"hidden\" name=\"txteliminar\" value=\""+numeroMascota+"\">"
-                + "<input type=\"submit\" value=\""+numeroMascota+"\">"
+                + "<input type=\"submit\" value=\"Eliminar\">"
                 + "</form>";
     }
     
