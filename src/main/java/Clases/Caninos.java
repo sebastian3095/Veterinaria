@@ -3,35 +3,33 @@
 package Clases;
 
 
-public class Caninos extends Mascotas{
-    
-    int nivelEntrenamiento;
+public class Caninos extends Mascotas {
 
-    public Caninos(int nivelEntrenamiento) {
-        this.nivelEntrenamiento = nivelEntrenamiento;
-    }
+    private int nivelEntrenamiento;
+    
 
     public Caninos() {
     }
-
+    
     public Caninos(String nombre, String raza, String color, int edad, int nivelEntrenamiento) {
+        
         super(nombre, raza, color, edad);
         this.nivelEntrenamiento = nivelEntrenamiento;
+
     }
 
-    @Override
     public int getNivelEntrenamiento() {
         return nivelEntrenamiento;
     }
 
-    @Override
-    public boolean getTieneToxoplasmosis() {
-        return false;
+    public void setNivelEntrenamiento(int nivelEntrenamiento) {
+        this.nivelEntrenamiento = nivelEntrenamiento;
     }
 
-
-    
-
+    @Override
+    public String toString() {
+        return super.toString()+ "<td>Nivel de entrenamiento: "+ nivelEntrenamiento+"</td>";
+    }
     
     
     

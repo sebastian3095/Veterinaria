@@ -2,19 +2,17 @@
 
 package Clases;
 
+import servlets.*;
 
-public abstract class Mascotas {
 
-    String nombre;
-    String raza;
-    String color;
-    int edad;
+public class Mascotas {
     
-    public abstract int getNivelEntrenamiento();
+    private String nombre;
+    private String raza;
+    private String color;
+    private int edad;
+    private int numeroMascota;
 
-    
-    public abstract boolean getTieneToxoplasmosis();
-    
     public Mascotas() {
     }
 
@@ -56,7 +54,25 @@ public abstract class Mascotas {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
+    
+    
+    
+    
+   public String botonE(){
+        return "<form action=\"index.html\">"
+                + "<input type=\"hidden\" name=\"txteliminar\" value=\""+numeroMascota+"\">"
+                + "<input type=\"submit\" value=\"Eliminar\">"
+                + "</form>";
+    }
+    
+   
+    
+    
+    
+    @Override
+    public String toString() {
+        return "<td>"+nombre+"</td><td>"+raza+"</td><td>"+color+"</td><td>"+edad+"</td>";
+    }
     
     
     

@@ -2,10 +2,6 @@
 package servlets;
 
 import Clases.*;
-import servlets.*;
-import Clases.Caninos;
-import Clases.Felinos;
-import Clases.Mascotas;
 
 
 
@@ -21,7 +17,9 @@ public class CrearObjeto {
     private static int nivelEntrenamiento;
     private static int contadorCaninos=0;
     private static int contadorFelinos=0;
+     private static int totalMascotas=0;
     private static int numeroMascota;
+   
 
     
     
@@ -52,18 +50,23 @@ public class CrearObjeto {
     public static void definirNumeroM(int numero){
         CrearObjeto.numeroMascota=numero;
     }
-    
-    public static int darNumeroM(){
-        return CrearObjeto.numeroMascota;
+
+    public static int getContadorCaninos() {
+        return contadorCaninos;
+    }
+
+    public static String getContadorFelinos() {
+        return String.valueOf(contadorFelinos);
+    }
+
+    public static int getTotalMascotas() {
+        totalMascotas=contadorCaninos+contadorFelinos;
+        return totalMascotas;
     }
     
-    public static String botonE(){
-        return "<form>"
-                + "<input type=\"hidden\" name=\"txteliminar\" value=\""+edad+"\">"
-                + "<input type=\"submit\" value=\""+numeroMascota+"\">"
-                + "</form>";
-        //return "<button value=\""+edad+"\" name=\"bttnEliminar\">eliminar</button>";
-    }
+
+    
+    
     
     public static Mascotas getMascota(){
         return mascota;

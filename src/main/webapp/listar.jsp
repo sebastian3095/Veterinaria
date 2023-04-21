@@ -5,7 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="Clases.Mascotas" %>
+<%@page import="Clases.*" %>
+<%@page import="servlets.*" %>
 <%@page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
@@ -38,7 +39,7 @@
 
         <article>
             <div>
-                <h2>Lista de caninos</h2>
+                <h2>Lista mascotas</h2>
                 <table border="1">
                     <thead>
                         <tr>
@@ -46,8 +47,7 @@
                             <th>Raza</th>
                             <th>Color</th>
                             <th>Edad</th>
-                            <th>Toxoplasmosis</th>
-                            <th>Nivel entrenamiento</th>
+                            <th>Otros</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -59,12 +59,7 @@
                                
                         %>
                         <tr>
-                            <td><%=m.getNombre()%></td>
-                            <td><%=m.getRaza()%></td>
-                            <td><%=m.getColor()%></td>
-                            <td><%=m.getEdad()%></td>
-                            <td><%=m.getTieneToxoplasmosis()%></td>
-                            <td><%=m.getNivelEntrenamiento()%></td>
+                            <%=m.toString()%>
                             
                             <td>
                                 <form method="post" action="eliminar.do">
@@ -80,6 +75,13 @@
                 <a href="index.html">Volver a inicio</a>     
 
             </div>
+            
+                    <h2>Total mascotas</h2>
+                    <p><%=CrearObjeto.getTotalMascotas(); %></p>
+                    <h2>Total gatos</h2>
+                    <p><%=CrearObjeto.getContadorFelinos(); %></p>
+                    <h2>Total Caninos</h2>
+                    <p><%=CrearObjeto.getContadorCaninos(); %></p>
 
         </article>
      

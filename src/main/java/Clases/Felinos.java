@@ -5,32 +5,39 @@ package Clases;
 
 public class Felinos extends Mascotas{
 
-    boolean tieneToxoplasmosis;
 
-    public Felinos(String nombre, String raza, String color, int edad, boolean tieneToxoplasmosis) {
-        super(nombre, raza, color, edad);
-        this.tieneToxoplasmosis = tieneToxoplasmosis;
-    }
-    
-    public Felinos(boolean tieneToxoplasmosis) {
-        this.tieneToxoplasmosis = tieneToxoplasmosis;
-    }
+    private boolean toxoplasmosis;
 
     public Felinos() {
     }
 
+    public Felinos(String nombre, String raza, String color, int edad, boolean toxoplasmosis) {
+        super(nombre, raza, color, edad);
+        this.toxoplasmosis = toxoplasmosis;
+    }
+
+    public boolean isToxoplasmosis() {
+        return toxoplasmosis;
+    }
+
+    public void setToxoplasmosis(boolean toxoplasmosis) {
+        this.toxoplasmosis = toxoplasmosis;
+    }
     
-
-    @Override
-    public int getNivelEntrenamiento() {
-        return 0;
+    private String tieneT(){
+        if(toxoplasmosis){
+            return "si";
+        }else{
+            return "no";
+        }
     }
 
     @Override
-    public boolean getTieneToxoplasmosis() {
-        return tieneToxoplasmosis;
+    public String toString() {
+        return super.toString()+ "<td>Tiene Toxoplasmosis: "+ tieneT()+"</td>";
     }
 
+    
     
     
     
