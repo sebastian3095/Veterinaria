@@ -75,13 +75,16 @@
                 <a href="index.html">Volver a inicio</a>     
 
             </div>
-            
+            <%  int ms=CrearObjeto.getTotalMascotas(); 
+                int g=CrearObjeto.getContadorFelinos();
+                int c=CrearObjeto.getContadorCaninos();
+            %>
                     <h2>Total mascotas</h2>
-                    <p><%=CrearObjeto.getTotalMascotas(); %></p>
+                    <p><%=ms%></p>
                     <h2>Total gatos</h2>
-                    <p><%=CrearObjeto.getContadorFelinos(); %></p>
+                    <p><%=g %></p>
                     <h2>Total Caninos</h2>
-                    <p><%=CrearObjeto.getContadorCaninos(); %></p>
+                    <p><%=c%></p>
 
         </article>
      

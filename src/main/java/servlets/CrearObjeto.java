@@ -55,8 +55,8 @@ public class CrearObjeto {
         return contadorCaninos;
     }
 
-    public static String getContadorFelinos() {
-        return String.valueOf(contadorFelinos);
+    public static int getContadorFelinos() {
+        return contadorFelinos;
     }
 
     public static int getTotalMascotas() {
