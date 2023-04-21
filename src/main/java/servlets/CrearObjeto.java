@@ -1,10 +1,14 @@
 
-package modelo;
+package servlets;
 
-/**
- *
- * @author sebas
- */
+import Clases.*;
+import servlets.*;
+import Clases.Caninos;
+import Clases.Felinos;
+import Clases.Mascotas;
+
+
+
 public class CrearObjeto {
     
     private static Mascotas mascota;
@@ -13,7 +17,7 @@ public class CrearObjeto {
     private static String color;
     private static int edad;
     private static String tipoMascota;
-    private static boolean toxoplasmosis;
+    private static boolean tienetoxoplasmosis;
     private static int nivelEntrenamiento;
     private static int contadorCaninos=0;
     private static int contadorFelinos=0;
@@ -21,20 +25,20 @@ public class CrearObjeto {
 
     
     
-    public static void pp(String nombre, String raza, String color, int edad,String tipoMascota, boolean toxoplasmosis, int nivelEntrenamiento){
+    public static void pp(String nombre, String raza, String color, int edad,String tipoMascota, boolean tieneToxoplasmosis, int nivelEntrenamiento){
         CrearObjeto.nombre = nombre;
         CrearObjeto.raza = raza;
         CrearObjeto.color = color;
         CrearObjeto.edad = edad;
         CrearObjeto.tipoMascota=tipoMascota;
-        CrearObjeto.toxoplasmosis=toxoplasmosis;
+        CrearObjeto.tienetoxoplasmosis= tieneToxoplasmosis;
         CrearObjeto.nivelEntrenamiento=nivelEntrenamiento;
     }
     
     public static void definirMascota(){
         
         if(tipoMascota.equals("gato")){
-            Felinos gato= new Felinos(nombre,raza,color,edad,toxoplasmosis);
+            Felinos gato = new Felinos(nombre, raza, color, edad, tienetoxoplasmosis);
             mascota=gato;
             contadorFelinos++;
         }else{

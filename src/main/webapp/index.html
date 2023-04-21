@@ -1,43 +1,48 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Veterinaria</title>
         <link href="stilo.css" rel="stylesheet" type="text/css"/> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <title>Veterinaria</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <header>
-        <h1 class="titulo">Veterinaria</h1>
-        </header>
 
         <article>
-            <div> 
-        <h2>Agregar mascota:</h2>
-        <form action="ControladorSrv" method="post">
-                <p>
-                    Gato <input type="radio" name="txtTipoMascota" value="gato">
-                    Perro <input type="radio" name="txtTipoMascota" value="perro"> 
-                </p>
-            
-                <p>Nombre: <input type="text" name="txtNombre" value="firulais"></p> 
-                <p>Raza: <input type="text" name="txtRaza" value="golden"></p> 
-                <p>Color: <input type="text" name="txtColor" value="cafe"></p> 
-                <p>Edad: <input type="text" name="txtEdad" value="3"></p> 
+            <div>
+                <h2>Agregar mascota:</h2>
+                <form action="registrar.do" method="post">
+                    <p>
+                        Gato <input type="radio" name="txtTipoMascota" value="gato">
+                        Perro <input type="radio" name="txtTipoMascota" value="perro"> 
+                    </p>
+                    <p>Nombre<input type="text" name="txtNombre" value="firulais"></p>
+                    <p>Raza:<input type="text" name="txtRaza" value="golden"></p>
+                    <p>Color:<input type="text" name="txtColor" value="cafe"></p>
+                    <p>Edad:<input type="number" name="txtEdad" value="3"></p>
 
-                <p>
-                    ¿Tiene Toxoplasmosis? <br>
-                    si <input type="radio" name="txtFelinoToxoplasmosis" value="true" >
-                    no <input type="radio" name="txtFelinoToxoplasmosis" value="false" checked>
-                </p> 
+                    <p>
+                        ¿Tiene Toxoplasmosis? <br>
+                        si <input type="radio" name="txtFelinoToxoplasmosis" value="true" >
+                        no <input type="radio" name="txtFelinoToxoplasmosis" value="false" checked>
+                    </p> 
 
-                <p>Nivel entrenamiento: <input type="number" name="txtCaninoNvEntrenamiento" value="1" min="0" max="10"></p> 
+                    <p>Nivel entrenamiento: <input type="number" name="txtCaninoNvEntrenamiento" value="1" min="0" max="10"></p> 
 
-                <input type="submit" value="Agregar">
-            </form>
-        </div>
+                    <input type="submit" name="enviar" value="Agregar">
+                </form>        
+            </div>
+        </article>            
+
+        <article>
+            <div>
+                <h2>Listar mascotas</h2>
+                <p><a href="listar.jsp">Listar</a></p>
+            </div>
         </article>
-
+        
     </body>
 </html>
+

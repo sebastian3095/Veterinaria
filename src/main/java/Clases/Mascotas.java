@@ -1,14 +1,20 @@
-package modelo;
 
 
-public class Mascotas {
+package Clases;
+
+
+public abstract class Mascotas {
+
+    String nombre;
+    String raza;
+    String color;
+    int edad;
     
-    private String nombre;
-    private String raza;
-    private String color;
-    private int edad;
-    private int numeroMascota;
+    public abstract int getNivelEntrenamiento();
 
+    
+    public abstract boolean getTieneToxoplasmosis();
+    
     public Mascotas() {
     }
 
@@ -17,7 +23,6 @@ public class Mascotas {
         this.raza = raza;
         this.color = color;
         this.edad = edad;
-        this.numeroMascota=CrearObjeto.darNumeroM();
     }
 
     public String getNombre() {
@@ -51,26 +56,7 @@ public class Mascotas {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    
-    
-    
-    
-   public String botonE(){
-        return "<form action=\"index.html\">"
-                + "<input type=\"hidden\" name=\"txteliminar\" value=\""+numeroMascota+"\">"
-                + "<input type=\"submit\" value=\"Eliminar\">"
-                + "</form>";
-    }
-    
-   
-    
-    
-    
-    @Override
-    public String toString() {
-        return "<td>"+nombre+"</td><td>"+raza+"</td><td>"+color+"</td><td>"+edad+"</td>";
-    }
-    
+
     
     
     
