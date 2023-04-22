@@ -15,6 +15,7 @@ public class Mascotas {
     private String tipoMascota;
 
     public Mascotas() {
+        
     }
 
     public Mascotas(String nombre, String raza, String color, int edad, String tipoMascota) {

@@ -81,9 +81,6 @@ public class CrearObjeto {
     }
     
     
-    
-    
-    
     public static Mascotas getMascota(){
         return mascota;
     }

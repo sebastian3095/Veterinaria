@@ -43,8 +43,10 @@
                     <tbody>
                         <% 
                             ArrayList<Mascotas> lista = (ArrayList<Mascotas>) request.getSession().getAttribute("lista");
+                            int eT=0;
                             for(int i=0; i<lista.size(); i++){
                                 Mascotas m = lista.get(i);
+                                eT+=m.getEdad();
                                
                         %>
                         <tr>
@@ -62,12 +64,13 @@
                     </tbody>
                 </table>
                 <br>
-                <a href="index.html">Volver a inicio</a>     
+                     
 
             </div>
             <%  int ms=CrearObjeto.getTotalMascotas(); 
                 int g=CrearObjeto.getContadorFelinos();
                 int c=CrearObjeto.getContadorCaninos();
+                double eP= (double)eT/(double)lista.size();
             %>
                     <h2>Total mascotas</h2>
                     <p><%=ms%></p>
@@ -75,6 +78,10 @@
                     <p><%=g %></p>
                     <h2>Total Caninos</h2>
                     <p><%=c%></p>
+                    <h2>Edad promedio</h2>
+                    <p><%=eP%></p>
+                    
+                   <a href="index.html">Agregar otra mascota</a>
 
         </article>
      

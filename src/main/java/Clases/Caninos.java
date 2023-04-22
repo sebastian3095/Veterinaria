@@ -9,6 +9,7 @@ public class Caninos extends Mascotas {
     
 
     public Caninos() {
+        
     }
     
     public Caninos(String nombre, String raza, String color, int edad, int nivelEntrenamiento, String tipoMascota) {

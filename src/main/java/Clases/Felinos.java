@@ -9,6 +9,7 @@ public class Felinos extends Mascotas{
     private boolean toxoplasmosis;
 
     public Felinos() {
+        
     }
 
     public Felinos(String nombre, String raza, String color, int edad, boolean toxoplasmosis,String tipoMascota) {
