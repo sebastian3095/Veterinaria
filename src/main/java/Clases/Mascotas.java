@@ -12,15 +12,17 @@ public class Mascotas {
     private String color;
     private int edad;
     private int numeroMascota;
+    private String tipoMascota;
 
     public Mascotas() {
     }
 
-    public Mascotas(String nombre, String raza, String color, int edad) {
+    public Mascotas(String nombre, String raza, String color, int edad, String tipoMascota) {
         this.nombre = nombre;
         this.raza = raza;
         this.color = color;
         this.edad = edad;
+        this.tipoMascota=tipoMascota;
     }
 
     public String getNombre() {
@@ -53,6 +55,10 @@ public class Mascotas {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    public String getTipoMascota() {
+        return tipoMascota;
     }
     
     

@@ -11,8 +11,8 @@ public class Felinos extends Mascotas{
     public Felinos() {
     }
 
-    public Felinos(String nombre, String raza, String color, int edad, boolean toxoplasmosis) {
-        super(nombre, raza, color, edad);
+    public Felinos(String nombre, String raza, String color, int edad, boolean toxoplasmosis,String tipoMascota) {
+        super(nombre, raza, color, edad, tipoMascota);
         this.toxoplasmosis = toxoplasmosis;
     }
 

@@ -22,6 +22,9 @@ public class Eliminar extends HttpServlet {
 
             //recuperar la posición a eliminar
             int pos = Integer.parseInt(request.getParameter("pos"));
+            String tipo= request.getParameter("txtTipoMascota");
+            
+            CrearObjeto.elinarMarcota(tipo);
 
             //eliminar el vehículo de la lista
             lista.remove(pos);
@@ -30,12 +33,16 @@ public class Eliminar extends HttpServlet {
             request.getSession().setAttribute("lista", lista);
 
             //redirigir a la página de inicio
-            response.sendRedirect("home.html");
+            response.sendRedirect("listar.jsp");
 
         }
 
     }
-    
+
+
+
+
+
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
 /**
  * Handles the HTTP <code>GET</code> method.

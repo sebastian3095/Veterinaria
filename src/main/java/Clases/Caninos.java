@@ -11,9 +11,9 @@ public class Caninos extends Mascotas {
     public Caninos() {
     }
     
-    public Caninos(String nombre, String raza, String color, int edad, int nivelEntrenamiento) {
+    public Caninos(String nombre, String raza, String color, int edad, int nivelEntrenamiento, String tipoMascota) {
         
-        super(nombre, raza, color, edad);
+        super(nombre, raza, color, edad, tipoMascota);
         this.nivelEntrenamiento = nivelEntrenamiento;
 
     }

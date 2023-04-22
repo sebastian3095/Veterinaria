@@ -64,6 +64,7 @@
                             <td>
                                 <form method="post" action="eliminar.do">
                                     <input type="hidden" name="pos" value="<%=i%>">
+                                    <input type="hidden" name="txtTipoMascota" value="<%=m.getTipoMascota()%>">
                                     <input type="submit" value="Eliminar">
                                 </form>
                             </td>

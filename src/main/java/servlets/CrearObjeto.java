@@ -36,15 +36,23 @@ public class CrearObjeto {
     public static void definirMascota(){
         
         if(tipoMascota.equals("gato")){
-            Felinos gato = new Felinos(nombre, raza, color, edad, tienetoxoplasmosis);
+            Felinos gato = new Felinos(nombre, raza, color, edad, tienetoxoplasmosis, tipoMascota);
             mascota=gato;
             contadorFelinos++;
         }else{
-            Caninos perro=new Caninos(nombre,raza,color,edad,nivelEntrenamiento);
+            Caninos perro=new Caninos(nombre,raza,color,edad,nivelEntrenamiento, tipoMascota);
             mascota=perro;
             contadorCaninos++;
         }
         
+    }
+    
+    public static void elinarMarcota(String tipoMascota){
+        if(tipoMascota.equals("gato")){
+            contadorFelinos--;
+        }else{
+            contadorCaninos--;
+        }
     }
     
     public static void definirNumeroM(int numero){
@@ -58,13 +66,21 @@ public class CrearObjeto {
     public static int getContadorFelinos() {
         return contadorFelinos;
     }
+    
+    public static void restarCanino(){
+        contadorCaninos--;
+    }
+    
+    public static void restarFelino(){
+        contadorFelinos--;
+    }
 
     public static int getTotalMascotas() {
         totalMascotas=contadorCaninos+contadorFelinos;
         return totalMascotas;
     }
     
-
+    
     
     
     

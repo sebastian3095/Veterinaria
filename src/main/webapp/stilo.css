@@ -40,3 +40,20 @@ article h2{
     margin-bottom: 0;
     padding-bottom: 0;
 }
+
+
+a:link{
+    color: orange;
+}
+
+a:visited{
+    color: rgb(0, 204, 255);
+}
+
+a:hover {
+    color: black;
+}
+
+a:active{
+    color: red;
+}
