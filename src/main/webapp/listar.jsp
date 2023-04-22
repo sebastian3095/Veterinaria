@@ -22,20 +22,9 @@
     </head>
     <body>
         
-        
-        <article>
-            <div>
-                <h2>Buscar por nombre:</h2>
-                <form action="pornombre.do" method="post">
-                    Nombre:<input type="text" name="txtNombre">
-                    <input type="submit" name="enviar" value="Buscar">
-                </form>
-
-            </div>
-        </article>
-            
-        
-        
+        <header>
+        <h1 class="titulo">Veterinaria</h1>
+        </header>
 
         <article>
             <div>
